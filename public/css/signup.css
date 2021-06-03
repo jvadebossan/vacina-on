@@ -1,0 +1,139 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    --branco:(color:#F7F7F7) 
+}
+
+body{
+    background-color: #282828;
+}
+
+.flex{
+    display: flex;
+}
+
+.justify{
+    display: flex;
+    justify-content: center;
+}
+
+.align{
+    display: flex;
+    align-items: center;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+}
+
+@media only screen and (min-width:320px) and (max-width:525px){
+    body{
+        background-color: #2e2e2e;
+        overflow-x: hidden;
+        width: 100vw;
+    }
+    header{
+        background-color: #303030;
+        height: 50px;
+        width: 100vw;
+        box-shadow: 0px 0px 10px rgb(10, 10, 10);
+    }
+    nav{
+        width: 100vw;
+        height: 50px;
+    }
+
+    .logo{
+        font-family: 'Palanquin', sans-serif;
+        color: #fff;
+        font-size: 20px;
+    }
+    
+    section h1{
+        color: #fff;
+        margin-top: 35px;
+        font-family: 'Palanquin', sans-serif;
+        font-weight: 50;
+        font-size: 22px;
+        max-width: 85%;
+        text-align: center;
+    }
+
+    .login_box{
+        margin-top: 50px;
+        width: 85vw;
+        height: 50vh;
+        border-radius: 7px;
+    }
+
+    .login_box h3{
+        color: #eee;
+        font-family: 'Palanquin', sans-serif;
+        font-weight: 100;
+        font-size: 12px;
+        margin-left: -78%;
+        margin-bottom: 0px;
+    }
+
+    .input{
+        width: 90%;
+        height: 25px;
+        margin-bottom: 40px;
+        background-color: transparent;
+        border-top: 0px;
+        border-left: 0px;
+        border-right: 0px;
+        border-bottom: 2px solid #BB86FC;
+        outline: none;
+        color: #bbb;
+    }
+
+    .input:focus{
+        border-color: #a158fa;
+        transition: .5s;
+    }
+
+    .input_svg{
+        width: 18px;
+        position: relative;
+        top: -65px;
+        right: -110px;
+        filter: invert(0.9);
+    }
+
+    .input_svg2{
+        top: -65px;
+    }
+
+    .input::placeholder{
+        padding-left: 2px;
+    }
+
+    .login_box .submit{
+        margin-top: 10px;
+        margin-bottom: 20px;
+        width: 90%;
+        color: white;
+        font-family: 'Palanquin', sans-serif;
+        font-size: 15px;
+        font-weight: 50;
+        text-transform: uppercase;
+        background-color: #aa64ff;
+        padding: 7px 50px;
+        border: 1px solid #aa64ff;
+        outline: none;
+        user-select: none;
+    }
+    .submit:hover{
+        background-color: #9d4ffc;
+        transition: .3s;
+    }
+    
+
+}

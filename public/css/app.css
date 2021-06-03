@@ -1,0 +1,312 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    --branco:(color:#F7F7F7) 
+}
+
+body{
+    background-color: #2e2e2e;
+}
+
+.flex{
+    display: flex;
+}
+
+.justify{
+    display: flex;
+    justify-content: center;
+}
+
+.align{
+    display: flex;
+    align-items: center;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+}
+
+@media only screen and (min-width:320px) and (max-width:525px){
+    body{
+        overflow-x: hidden;
+        overflow-y: hidden;
+        width: 100vw;
+    }
+    .bg{
+        width: 100%;
+        position: absolute;
+        top: 0%;
+        left: 0;
+    }
+    footer{
+        position: absolute;
+        bottom: 0;
+        z-index: 0;
+        background-color: #303030;
+        height: 60px;
+        width: 100vw;
+        box-shadow: 0px 0px 10px rgb(10, 10, 10);
+    }
+    nav{
+        width: 100vw;
+        height: 60px;
+    }
+    nav ul{
+        width: 95%;
+        list-style: none;
+        justify-content: center;
+    }
+    nav ul li{
+        flex: 1;
+    }
+    .option{
+        width: 100%;
+        height: 100%;
+    }
+    .op_icon{
+        width: 25px;
+        filter: invert(1);
+    }
+    .op_name{
+        color: #efefef;
+        font-family: 'Palanquin', sans-serif;
+        font-size: 10px;
+        letter-spacing: 1px;
+        font-weight: 100;
+    }
+    .home_icon{
+        position: relative;
+        z-index: 2;
+        width: 40px;
+        bottom: 20px;
+        background-color: #aa64ff;
+        box-shadow: 0px 0px 5px #000;
+        box-shadow: 0px 0px 10px #9f52fc;
+        padding: 10px;
+        border-radius: 360px;
+    }
+
+    .profile{
+        width: 100vw;
+        height: 100vh;
+        background-color: #1e1e1e;
+        position: absolute;
+        left: -100%;
+        transition: .5s;
+    }
+    .toggle_profile{
+        left: 0%;
+    }
+    .profile_content{
+        justify-content: flex-start;
+        width: 80%;
+        height: 80%;
+        margin-top: -20%;
+    }
+
+    .profile_picture{
+        margin: 10px;
+        border-radius: 360px;
+        width: 50%;
+    }
+    .profile_name{
+        color: #efefef;
+        font-family: 'Palanquin', sans-serif;
+        font-size: 1.6rem;
+    }
+
+    .profile_birthday, .profile_cpf, .profile_separator{
+        color: #efefef;
+        font-family: 'Palanquin', sans-serif;
+        font-size: .8rem;
+    }
+
+    .profile_separator{
+        margin: 0px 5px;
+    }
+    .vaccine_title{
+        margin-top: 5px;
+        text-align: center;
+        color: #efefef;
+        font-family: 'Palanquin', sans-serif;
+        font-size: 1.3rem;
+    }
+    .vaccine_box{
+        list-style: none;
+        background-color: #303030;
+        border-radius: 3px;
+        width: 92%;
+        box-sizing: border-box;
+    }
+    .vaccine_item{
+        margin: 7px;
+        padding: 5px;
+        color: #cecece;
+        font-weight: 100;
+        font-family: 'Palanquin', sans-serif;
+        font-size: .6rem;
+        background-color: #aa64ffa8;
+        border-radius: 3px;
+    }
+    .profile_close{
+        width: 20px;
+        position: absolute;
+        z-index: 3;
+        right: 15px;
+        top: 15px;
+        transition: .5s;
+    }
+    .grid{
+        width: 90vw;
+        height: 50vh;
+        position: absolute;
+        top: 19%;
+        left: 5%;
+        justify-content: space-around;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+    .grid_item{
+        background-color: #dfdfdf;
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.562);
+        width: 40%;
+        height: 40%;
+        padding: 10px 0px;
+        border-radius: 7px;
+    }
+    .grid_icon{
+        width: 70%;
+        top: -5%;
+        position: relative;
+        left: 15%;
+    }
+    .grid_desc{
+        font-weight: 100;
+        font-family: 'Palanquin', sans-serif;
+        font-size: 1rem;
+        border-radius: 3px;
+        text-align: center;
+        margin-top: -15px;
+    }
+    .blur{
+        display: none;
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        z-index: 99;
+        backdrop-filter: blur(6px);
+    }
+
+    iframe{
+        display: none;
+        position: absolute;
+        z-index: 100;
+        width: 90vw;
+        height: 50vh;
+        top: 5%;
+        left: 0.8%;
+        background-color: #1e1e1e;
+        padding: 15px;
+        padding-top: 50px;
+    }
+
+    .map_close{
+        display: none;
+        width: 20px;
+        position: relative;
+        z-index: 101;
+        bottom: 75%;
+        left: 210%;
+    }
+
+    .popup{
+        display: block;
+    }
+
+
+    .notifications, .configs, .registros, .infos{
+        width: 100vw;
+        height: 100vh;
+        background-color: #1e1e1e;
+        position: absolute;
+        top: -100%;
+        z-index: 4;
+        transition: .5s;
+    }
+    .configs{
+        top:0%;
+        right: -100%;
+    }
+    .infos{
+        top: -200%;
+    }
+    
+    .toggle_notifications, .toggle_registros, .toggle_infos{
+        top: 0%;
+    }
+    .toggle_configs{
+        right: 0%;
+    }
+
+    .notification_title, .config_title, .info_title{
+        margin-top: 35px;
+        text-align: center;
+        color: #efefef;
+        font-family: 'Palanquin', sans-serif;
+        font-size: 1.7rem;
+    }
+    .notifications_content, .configs_content, .registros_content, .infos_content{
+        justify-content: flex-start;
+        width: 80%;
+        height: 80%;
+        margin-top: -20%;
+    }
+
+    .infos_content{
+        width: 90%;
+        margin-top: -10%;
+    }
+
+    .infos_content h3{
+        color: white;
+        font-family: 'Palanquin', sans-serif;
+        text-align: center;
+
+    }
+
+    .notification_box, .config_box, .registro_box, .info_box{
+        list-style: none;
+        background-color: #303030;
+        border-radius: 3px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .notification_item, .config_item{
+        margin: 7px;
+        padding: 5px;
+        color: #cecece;
+        font-weight: 100;
+        font-family: 'Palanquin', sans-serif;
+        font-size: .8rem;
+        background-color: #aa64ffa8;
+        border-radius: 3px;
+    }
+    .notifications_close, .configs_close, .registros_close, .infos_close{
+        width: 20px;
+        position: absolute;
+        z-index: 3;
+        right: 15px;
+        top: 15px;
+        transition: .5s;
+    }
+
+}
+
